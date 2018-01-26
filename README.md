@@ -11,4 +11,4 @@
 # Note
 *   Engine View in folder `./templates/` use [ejs](http://www.embeddedjs.com/)
 *   Don't forget to fill `./config.json` data
-*	Don't use `node api.js` in crontab, because call once running once
+*	Don't use `node TourComment/api.js` in crontab, because call once running once

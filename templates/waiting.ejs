@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css%family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body  style="width:800px;margin:0 auto;padding:0;font-family: 'Open Sans'">
+<div align="center" border="0" cellpadding="0" cellspacing="0" style="width: 800px;height: auto;background-color: #F3FAFF;">
+    <table cellpadding="0" cellspacing="0"  style="background-image: url('http://assets.momotrip.co.id/email/revisi/header.png');background-repeat: repeat-x;background-position: top;background-size: 100%;width: 100%;border-top: none;">
+        <tr>
+            <td align="center">
+                <img style="display:block;" src="http://assets.momotrip.co.id/email/revisi/momo-icon-2.png" width="600px">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="height: auto;">
+                    <table cellpading="0" cellspacing="0" style="background-color: #fff;height: 100%;width: 600px;background-size: 100%;vertical-align: text-top;padding-bottom: 100px;">
+                        <tr>
+                            <td style="padding-left: 25px;padding-right: 25px;height: 150px;background-position: center top;text-align: center;">
+                                <h1 style="color:#37AAEF;vertical-align: text-bottom;background-color: #fff;">Menunggu Pembayaran ke <%= data.step %></h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: auto;padding-left: 25px;padding-right: 25px;width: 100%">
+                                <table style="width: 100%;text-align: center;margin: 40px 0px;">
+                                    <tr>
+                                        <td style="color:#535353;font-size: 18px;">Anda Mempunyai Waktu   </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 36px;color:#334d81;font-weight: bold"><%= data.expired_duration %></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 16px;color:#535353;">sampai <%= data.expired_time %></td>
+                                    </tr>
+                                </table>
+                                <table style="width: 100%;text-align: center;padding-bottom: 60px;border-bottom: 1px solid #d1d1d1;margin-bottom: 5px;">
+                                    <tr>
+                                        <td style="width: 100%">
+                                            <span style="color:#535353;font-size: 18px;">Kode Booking</span>
+                                            <div id="bookingCode" style="font-size: 24px;color:#334d81;font-weight: bold"><%= data.booking_code %></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="card-title" style="border-bottom: 1px solid #dcdcdc;text-align: center;width: 245px;margin: 0 auto;margin-bottom: 20px">
+                                    <div class="card-inside-title" style="padding: 20px 0px 0px;color:#404040;font-size: 20px;font-weight: bold" >
+                                        Rincian Pembayaran
+                                    </div>
+                                    <div class="blue-border" style="border-bottom: 4px solid #56bdef;margin:0 auto;margin-bottom: -7px;width: 85px;display: inline-block"></div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td><b style="font-size: 18px;color:#404040">Status Pembayaran</b></td>
+                                        <td style="width: 60px;text-align: center">:</td>
+                                        <td style="font-size: 18px;color:#6d6d6d;font-weight: bold">Menunggu</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b style="font-size: 18px;color:#404040">Metode Pembayaran</b></td>
+                                        <td style="width: 60px;text-align: center">:</td>
+                                        <td style="font-size: 18px;color:#6d6d6d;font-weight: bold">Tabungan</td>
+                                    </tr>
+                                </table>
+                                <table style="width: 100%;margin-bottom: 5px;" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 18px;color:#505252;font-weight: bold">Harga</td>
+                                        <td style="width: 50%;text-align: right;border-bottom: 1px solid #d1d1d1;padding: 25px 0px">IDR <b><%= data.tour_price %> x <%= data.total_pax %> peserta</b></td>
+                                    </tr>
+                                    <% if (data.hotel_name != null) { %>
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 18px;color:#505252;font-weight: bold">Hotel : <br><%= data.hotel_name %></td>
+                                        <td style="width: 50%;text-align: right;border-bottom: 1px solid #d1d1d1;padding: 25px 0px">IDR <b><%= data.hotel_price %> x <%= data.total_room %> PAX</b></td>
+                                    </tr>
+                                    <% } %>
+                                    <% if (data.voucher_price > 0) { %>
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 18px;color:#505252;font-weight: bold">Diskon Voucher</td>
+                                        <td style="width: 50%;text-align: right;border-bottom: 1px solid #d1d1d1;padding: 25px 0px">(-) IDR <b><%= data.price_voucher %></b></td>
+                                    </tr>
+                                    <% } %>
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 18px;color:#404040;font-weight: bold">Jumlah Total</td>
+                                        <td style="width: 50%;text-align: right;border-bottom: 1px solid #d1d1d1;padding: 25px 0px">IDR <b><%= data.total_price %></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 18px;color:#404040;font-weight: bold">Jumlah Yang Harus Dibayar</td>
+                                        <td style="width: 50%;text-align: right;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 20px;">IDR <b style="color: #f97b06"><%= data.price %></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;text-align: left;border-bottom: 1px solid #d1d1d1;padding: 25px 0px;font-size: 18px;color:#404040;font-weight: bold">Sudah dibayar</td>
+                                        <td style="width: 50%;text-align: right;border-bottom: 1px solid #d1d1d1;padding: 25px 0px">IDR <b><%= data.sudah_dibayar %></b></td>
+                                    </tr>
+                                </table>
+                                <div class="card-title" style="border-bottom: 1px solid #dcdcdc;text-align: center;width: 245px;margin: 0 auto;margin-bottom: 20px">
+                                    <div class="card-inside-title" style="padding: 20px 0px 0px;color:#404040;font-size: 20px;font-weight: bold" >
+                                        Info Kontak
+                                    </div>
+                                    <div class="blue-border" style="border-bottom: 4px solid #56bdef;margin:0 auto;margin-bottom: -7px;width: 85px;display: inline-block"></div>
+                                </div>
+                                <table style="width: 100%;border-bottom: 1px solid #d1d1d1;padding: 10px 70px 40px">
+                                    <tr>
+                                        <td style="font-size: 18px;color:#404040;font-weight: bold">Nama</td>
+                                        <td style="width: 60px;text-align: center;font-size: 18px;color:#404040;font-weight: bold">:</td>
+                                        <td style="font-size: 18px;color:#6d6d6d;"><%if (data.title_name) { %><%= data.title_name %><% } %><%if (data.first_name) { %><%=  ' '+data.first_name %><% } %><%if (data.last_name) { %><%=  ' '+data.last_name %><% } %></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 18px;color:#404040;font-weight: bold">Email</td>
+                                        <td style="width: 60px;text-align: center;font-size: 18px;color:#404040;font-weight: bold">:</td>
+                                        <td style="font-size: 18px;color:#6d6d6d;"><%= data.email %></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 18px;color:#404040;font-weight: bold">No. Telp</td>
+                                        <td style="width: 60px;text-align: center;font-size: 18px;color:#404040;font-weight: bold">:</td>
+                                        <td style="font-size: 18px;color:#6d6d6d;"><%= data.phone_number %></td>
+                                    </tr>
+                                </table>
+                                <div class="card-title" style="border-bottom: 1px solid #dcdcdc;text-align: center;width: 245px;margin: 0 auto;margin-bottom: 20px">
+                                    <div class="card-inside-title" style="padding: 20px 0px 0px;color:#404040;font-size: 20px;font-weight: bold" >
+                                        Informasi Tur
+                                    </div>
+                                    <div class="blue-border" style="border-bottom: 4px solid #56bdef;margin:0 auto;margin-bottom: -7px;width: 85px;display: inline-block"></div>
+                                </div>
+                                <table style="width: 100%;border-bottom: 1px solid #d1d1d1;margin-bottom: 5px;padding-bottom: 20px;">
+                                    <tr>
+                                        <td>
+                                            <img src="<%= data.photo %>">
+                                        </td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td colspan="3" style="font-size: 20px;color:#404040;font-weight: bold">
+                                                        <%= data.title %> (<%= data.category_name %>)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" style="margin-bottom: 15px;border-bottom: 1px solid #d1d1d1;padding-bottom: 15px;font-size: 16px;color:#404040">
+                                                        <%= data.start_date %> - <%= data.end_date %>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 14px;color:#404040;font-weight: bold;padding-top: 20px;">Nama</td>
+                                                    <td style="width: 60px;text-align: center;padding-top: 20px;">:</td>
+                                                    <td style="font-size: 14px;color:#6d6d6d;padding-top: 20px;"><%if (data.title_name) { %><%= data.title_name %><% } %><%if (data.first_name) { %><%=  ' '+data.first_name %><% } %><%if (data.last_name) { %><%=  ' '+data.last_name %><% } %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 14px;color:#404040;font-weight: bold">Jumlah</td>
+                                                    <td style="width: 60px;text-align: center">:</td>
+                                                    <td style="font-size: 14px;color:#6d6d6d;"><%= data.total_pax %> orang</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 14px;color:#404040;font-weight: bold">Kota</td>
+                                                    <td style="width: 60px;text-align: center">:</td>
+                                                    <td style="font-size: 14px;color:#6d6d6d;"><%= data.city %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 14px;color:#404040;font-weight: bold">Durasi</td>
+                                                    <td style="width: 60px;text-align: center">:</td>
+                                                    <td style="font-size: 14px;color:#6d6d6d;"><%= data.total_day %> <%if (data.duration_type = 'day') { %>Hari<% }else{ %>Jam<% } %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 14px;color:#404040;font-weight: bold">Momoranger</td>
+                                                    <td style="width: 60px;text-align: center">:</td>
+                                                    <td style="font-size: 14px;color:#6d6d6d;"><%= data.momoranger %></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="card-title" style="border-bottom: 1px solid #dcdcdc;text-align: center;width: 245px;margin: 0 auto;margin-bottom: 20px">
+                                    <div class="card-inside-title" style="padding: 20px 0px 0px;color:#404040;font-size: 20px;font-weight: bold" >
+                                        Metode Pembayaran
+                                    </div>
+                                    <div class="blue-border" style="border-bottom: 4px solid #56bdef;margin:0 auto;margin-bottom: -7px;width: 85px;display: inline-block"></div>
+                                </div>
+                                <div id="paymentMethod" style="padding-bottom: 20px;border-bottom: 1px solid #d1d1d1;margin-bottom: 20px;">
+                                    <table width="100%" cellspacing="0" cellpadding="5" border="0" style="font-size:12px;">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <div style="display:block">
+                                                        <h2>Mandiri :</h2>
+                                                        <ul style="margin-top:3px;font-size:15px;">
+                                                            <li>Transfer via ATM / iBanking / mBanking / setor tunai ke rekening Momotrip</li>
+                                                            <li>No. Rekening: <b>121.007.999.8880</b> a.n Momotrip Axia</li>
+                                                            <li>Jumlah yang harus dibayar IDR <b><%= data.price %></b></li>
+                                                        </ul><br />
+                                                        <h2>BRI :</h2>
+                                                        <ul style="margin-top:3px;font-size:15px;">
+                                                            <li>Transfer via ATM / iBanking / mBanking / setor tunai ke rekening Momotrip</li>
+                                                            <li>No. Rekening: <b>0339-0100-1050-566</b> a.n Momotrip Axia</li>
+                                                            <li>Jumlah yang harus dibayar IDR <b><%= data.price %></b></li>
+                                                        </ul><br />
+                                                        <h2>BCA :</h2>
+                                                        <ul style="margin-top:3px;font-size:15px;">
+                                                            <li>Transfer via ATM / iBanking / mBanking / setor tunai ke rekening Momotrip</li>
+                                                            <li>No. Rekening: <b>218.1877.555</b> a.n Momotrip Axia</li>
+                                                            <li>Jumlah yang harus dibayar IDR <b><%= data.price %></b></li>
+                                                        </ul><br />
+                                                        <h2>BNI :</h2>
+                                                        <ul style="margin-top:3px;font-size:15px;">
+                                                            <li>Transfer via ATM / iBanking / mBanking / setor tunai ke rekening Momotrip</li>
+                                                            <li>No. Rekening: <b>04.6904.7162</b> a.n Momotrip Axia</li>
+                                                            <li>Jumlah yang harus dibayar IDR <b><%= data.price %></b></li>
+                                                        </ul><br />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div style="text-align: center">
+                                        <a href="<%= config_url %>dashboard/order?orderid=<%= data.booking_code %>" style="text-decoration: none;color: white;">
+                                            <div style="font-weight: bold; font-size: 16px; background-color: #4b76bf; width: 85%; margin: auto; padding:12px 0px 12px 0px;">Upload Bukti Pembayaran</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="background-image: url('http://assets.momotrip.co.id/email/revisi/footer.png');background-repeat: no-repeat;background-position: bottom;height: 250px;width: 100%;">
+                     <tr>
+                        <td style="padding: 35px 50px 50px 70px;color: #fff;width: 75%">
+                            <div style="width: 100%;padding: 5px;">
+                                <a href="https://www.momotrip.co.id/"><img style="width: 200px;" src="http://assets.momotrip.co.id/email/revisi/logo-momo-putih.png"></a>
+                            </div>
+                            <div style="width: 100%;padding: 5px;color: #fff;">
+                                PT Momotrip Axia Indonesia<br>
+                                Momotrip Graha<br>
+                                <a href="" style="color: #fff;text-decoration: none;">Jl Condet raya No 27, Batu Ampar, Kramat Jati</a><br>
+                                Jakarta Timur, Indonesia
+                            </div>
+                        </td>
+                        <td style="padding: 35px 70px 50px 50px;color: #fff;width: 25%">
+                            <table>
+                                <tr>
+                                    <td colspan='3'><a href="http://journal.momotrip.co.id/"><img style="width: 200px;" src="http://assets.momotrip.co.id/email/revisi/logo-momo-journal-putih.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td><center><a href="https://www.facebook.com/momotrip.co.id"><img style="width: 60%;" src="http://assets.momotrip.co.id/email/revisi/1.png"></a></center></td>
+                                    <td><center><a href="https://www.instagram.com/momotrip.co.id/"><img style="width: 60%;" src="http://assets.momotrip.co.id/email/revisi/2.png"></a></center></td>
+                                    <td><center><a href="https://twitter.com/momotrip_co_id"><img style="width: 60%;" src="http://assets.momotrip.co.id/email/revisi/3.png"></a></center></td>
+                                </tr>
+                                <tr>
+                                    <td><center><a href="https://www.youtube.com/Momotrip"><img style="width: 60%;" src="http://assets.momotrip.co.id/email/revisi/4.png"></a></center></td>
+                                    <td><center><a href="https://plus.google.com/+Momotrip"><img style="width: 60%;" src="http://assets.momotrip.co.id/email/revisi/5.png"></a></center></td>
+                                    <td><center><a href="https://www.linkedin.com/company/pt.-momotrip-axia-indonesia"><img style="width: 60%;" src="http://assets.momotrip.co.id/email/revisi/6.png"></a></center></td>
+                                </tr>
+                             </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

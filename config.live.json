@@ -1,0 +1,24 @@
+{
+	"api_key_sms": "",
+	"api_secret_sms": "",
+
+	"db": {
+		"host": "live-momotrip.casnu71dcj5n.ap-southeast-1.rds.amazonaws.com",
+		"port": 3306,
+		"user": "momolive",
+		"password": "Momotrip2017DB!",
+		"name": "momo-v2"
+	},
+
+	"mailer": {
+		"service": "zoho",
+		"host": "smtp.zoho.com",
+		"port": 587,
+		"secure": false,
+		"email": "admin@momotrip.co.id",
+		"password": "momotrip2016!"
+	},
+
+	"asset_phototour": "http://assets.momotrip.co.id/tours/",
+	"config_url": "https://momotrip.co.id/"
+}

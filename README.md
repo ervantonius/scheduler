@@ -7,6 +7,7 @@
 * `node lib/BirthdayVoucher/index.js` for running automatic generate voucher for user birthday H-30 and greeting card on his/her birthday
 * `node lib/ReminderSaving/index.js` for running automatic send mail reminder users saving payment
 * `node lib/SMSender/index.js` for running sender SMS feature
+* `node lib/TourSubscribe/index.js` for running reminder tour available
 
 # Note
 *   Engine View in folder `./templates/` use [ejs](http://www.embeddedjs.com/)

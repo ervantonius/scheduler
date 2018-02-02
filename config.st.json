@@ -3,7 +3,7 @@
 	"api_secret_sms": "",
 
 	"db": {
-		"host": "st-momotripdb.casnu71dcj5n.ap-southeast-1.rds.amazonaws.com",
+		"host": "192.168.2.2",
 		"port": 3306,
 		"user": "momostagging",
 		"password": "Momotrip2016DB",
@@ -11,12 +11,13 @@
 	},
 
 	"mailer": {
-		"service": "zoho",
-		"host": "smtp.zoho.com",
-		"port": 587,
-		"secure": false,
+		"service": "SendGrid",
+		"host": "smtp.sendgrid.com",
+		"port": 2525,
+		"secure": true,
 		"email": "notif@momotrip.id",
-		"password": "Momotrip2017"
+		"sendgrid_user": "apikey",
+		"password": "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"
 	},
 
 	"asset_phototour": "https://st2-assets.momotrip.co.id/tours/",

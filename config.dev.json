@@ -16,8 +16,8 @@
 		"port": 2525,
 		"secure": true,
 		"email": "admin@momotrip.co.id",
-		"sendgrid_user": "azure_7fefaea10b5d1fd9ec47f55d16a74b22@azure.com",
-		"password": "MomotripMail2017"
+		"sendgrid_user": "apikey",
+		"password": "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"
 	},
 
 	"asset_phototour": "https://dev-assets.momotrip.co.id/tours/",

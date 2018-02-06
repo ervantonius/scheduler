@@ -1,6 +1,7 @@
 {
 	"api_key_sms": "",
 	"api_secret_sms": "",
+	"api_sendgrid": "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",
 
 	"db": {
 		"host": "192.168.3.2",

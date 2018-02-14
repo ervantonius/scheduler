@@ -21,6 +21,6 @@
 		"password": "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"
 	},
 
-	"asset_phototour": "https://dev-assets.momotrip.co.id/tours/",
-	"config_url": "https://dev.momotrip.co.id/"
+	"asset_phototour": "http://dev.assets.momotrip.co.id/tours/",
+	"config_url": "http://dev.momotrip.co.id/"
 }

@@ -1,0 +1,26 @@
+{
+	"api_key_sms": "",
+	"api_secret_sms": "",
+	"api_sendgrid": "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",
+
+	"db": {
+		"host": "localhost",
+		"port": 3306,
+		"user": "root",
+		"password": "",
+		"name": "momo"
+	},
+
+	"mailer": {
+		"service": "SendGrid",
+		"host": "smtp.sendgrid.net",
+		"port": 2525,
+		"secure": true,
+		"email": "admin@momotrip.co.id",
+		"sendgrid_user": "apikey",
+		"password": "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"
+	},
+
+	"asset_phototour": "http://dev.assets.momotrip.co.id/tours/",
+	"config_url": "http://dev.momotrip.co.id/"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "momo-scheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "basic-auth": "^2.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "nodemailer": "^4.3.1",
+    "sendgrid": "^5.2.3",
+    "winston": "^2.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ervan Antonius",
+  "license": "ISC"
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body  style="width:800px;margin:0 auto;padding:0;font-family: 'Open Sans'">
+<div align="center" border="0" cellpadding="0" cellspacing="0" style="width: 800px;height: auto;background-color: #F3FAFF;">
+    <table cellpadding="0" cellspacing="0"  style="background-image: url('https://assets.momotrip.co.id/email/revisi/header.png');background-repeat: repeat-x;background-position: top;background-size: 100%;width: 100%;border-top: none;">
+        <tr>
+            <td align="center">
+                <img style="display:block;" src="https://assets.momotrip.co.id/email/revisi/momo-icon-2.png" width="600px">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="height: auto;">
+                    <table cellpading="0" cellspacing="0" style="background-color: #fff;height: 100%;width: 600px;background-size: 100%;vertical-align: text-top;padding-bottom: 75px;">
+                        <tr>
+                            <td style="padding-left: 25px;padding-right: 25px;height: 150px;background-position: center top;text-align: center;">
+                                <h1 style="color:#37AAEF;vertical-align: text-bottom;background-color: #fff;">
+                                    Happy Birthday !
+                                </h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 16px; height: auto;padding-left: 25px;padding-right: 25px;width: 100%">
+                                <b>Hi<%if (data.first_name) { %><%=  ' '+data.first_name %><% } %><%if (data.last_name) { %><%=  ' '+data.last_name %><% } %>,</b><br />
+                                <p>
+                                    Kami dari Momotrip mengucapkan Selamat Ulang Tahun yang ke-<%= data.umur %><br />
+                                    Semoga panjang umur, sehat selalu, dan selalu dilimpahkan rejeki.<br /><br />
+                                </p>
+                                <br />
+                                <br />
+                                <p>
+                                    Best Regards,<br /><br /><br /><br />
+                                    Momotrip
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="background-image: url('https://assets.momotrip.co.id/email/revisi/footer.png');background-repeat: no-repeat;background-position: bottom;height: 250px;width: 100%;">
+                     <tr>
+                        <td style="padding: 35px 50px 50px 70px;color: #fff;width: 75%">
+                            <div style="width: 100%;padding: 5px;">
+                                <a href="https://www.momotrip.co.id/"><img style="width: 200px;" src="https://assets.momotrip.co.id/email/revisi/logo-momo-putih.png"></a>
+                            </div>
+                            <div style="width: 100%;padding: 5px;color: #fff;">
+                                PT Momotrip Axia Indonesia<br>
+                                Momotrip Graha<br>
+                                <a href="" style="color: #fff;text-decoration: none;">Jl Condet raya No 27, Batu Ampar, Kramat Jati</a><br>
+                                Jakarta Timur, Indonesia
+                            </div>
+                        </td>
+                        <td style="padding: 35px 70px 50px 50px;color: #fff;width: 25%">
+                            <table>
+                                <tr>
+                                    <td colspan='3'><a href="http://journal.momotrip.co.id/"><img style="width: 200px;" src="https://assets.momotrip.co.id/email/revisi/logo-momo-journal-putih.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td><center><a href="https://www.facebook.com/momotrip.co.id"><img style="width: 60%;" src="https://assets.momotrip.co.id/email/revisi/1.png"></a></center></td>
+                                    <td><center><a href="https://www.instagram.com/momotrip.co.id/"><img style="width: 60%;" src="https://assets.momotrip.co.id/email/revisi/2.png"></a></center></td>
+                                    <td><center><a href="https://twitter.com/momotrip_co_id"><img style="width: 60%;" src="https://assets.momotrip.co.id/email/revisi/3.png"></a></center></td>
+                                </tr>
+                                <tr>
+                                    <td><center><a href="https://www.youtube.com/Momotrip"><img style="width: 60%;" src="https://assets.momotrip.co.id/email/revisi/4.png"></a></center></td>
+                                    <td><center><a href="https://plus.google.com/+Momotrip"><img style="width: 60%;" src="https://assets.momotrip.co.id/email/revisi/5.png"></a></center></td>
+                                    <td><center><a href="https://www.linkedin.com/company/pt.-momotrip-axia-indonesia"><img style="width: 60%;" src="https://assets.momotrip.co.id/email/revisi/6.png"></a></center></td>
+                                </tr>
+                             </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

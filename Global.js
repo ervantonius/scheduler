@@ -17,7 +17,8 @@ global.db = mysql.createConnection({
 });
 
 global.sender = nodemailer.createTransport({
-	service: config.mailer.service,
+	host: config.mailer.host,
+	port: config.mailer.port,
     auth: {
         user: (config.mailer.sendgrid_user) ? config.mailer.sendgrid_user : config.mailer.email,
         pass: config.mailer.password

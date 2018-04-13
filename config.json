@@ -16,6 +16,7 @@
 		"host": "smtp.sendgrid.net",
 		"port": 2525,
 		"secure": true,
+		"reject_unauthorized": false,
 		"email": "admin@momotrip.co.id",
 		"sendgrid_user": "apikey",
 		"password": "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"

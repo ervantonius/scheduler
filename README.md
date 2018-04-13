@@ -13,3 +13,13 @@
 *   Engine View in folder `./templates/` use [ejs](http://www.embeddedjs.com/)
 *   Don't forget to fill `./config.json` data
 *	Don't use `node lib/TourComment/api.js` in crontab, because call once running once
+
+# Deployment
+## Initial data
+* insert table tour_comment_coupons with cut off comments to voucher
+
+## Deploy with crontab
+* `MAILTO="to@domain.com"
+  0 8 * * * /usr/bin/node /<root path>/lib/TourComment/index.js`
+* `*/5 * * * * /usr/bin/node lib/TourComment/voucher.js >/dev/null 2>&1`
+

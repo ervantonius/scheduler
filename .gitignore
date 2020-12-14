@@ -1,2 +1,7 @@
 node_modules/*
 logs/*
+config.dev.json
+config.json
+config.live.json
+config.qc.json
+config.st.json
